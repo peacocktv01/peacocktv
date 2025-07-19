@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Understanding Peacock TV Support</title>
+  <style>
+    /* Reset and Base Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    a {
+      text-decoration: none;
+      color: #0073e6;
+    }
+
+    header {
+      background: #000;
+      color: white;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    nav {
+      display: flex;
+      gap: 15px;
+    }
+
+    .nav-link {
+      color: white;
+      font-weight: bold;
+    }
+
+    .hero {
+      background: linear-gradient(to right, #0047ab, #00a8e8);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+      animation: slideDown 1s ease-in-out;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      text-decoration: underline;
+    }
+
+    .marquee {
+      background: #ffc107;
+      color: #000;
+      padding: 10px;
+      white-space: nowrap;
+      overflow: hidden;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    .marquee-text {
+      display: inline-block;
+      padding-left: 100%;
+      animation: marquee 15s linear infinite;
+    }
+
+    @keyframes marquee {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-100%); }
+    }
+
+    @keyframes slideDown {
+      0% { transform: translateY(-50px); opacity: 0; }
+      100% { transform: translateY(0); opacity: 1; }
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 20px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      animation: fadeIn 2s ease-in;
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    h2 {
+      margin: 20px 0 10px;
+      color: #0047ab;
+    }
+
+    p, li {
+      margin: 10px 0;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    /* Hamburger Menu */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .hamburger div {
+      width: 25px;
+      height: 3px;
+      background-color: white;
+      margin: 4px 0;
+    }
+
+    .mobile-nav {
+      display: none;
+      flex-direction: column;
+      background: #000;
+    }
+
+    .mobile-nav a {
+      color: white;
+      padding: 10px;
+      border-top: 1px solid #222;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+
+      .mobile-nav.active {
+        display: flex;
+      }
+
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .container {
+        padding: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">Peacock Help</div>
+    <nav>
+      <a href="#" class="nav-link">Home</a>
+      <a href="#" class="nav-link">Login</a>
+      <a href="#" class="nav-link">Support</a>
+      <a href="#" class="nav-link">Activate</a>
+    </nav>
+    <div class="hamburger" onclick="toggleMobileMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </header>
+
+  <div class="mobile-nav" id="mobileNav">
+    <a href="#">Home</a>
+    <a href="#">Login</a>
+    <a href="#">Support</a>
+    <a href="#">Activate</a>
+  </div>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h1>Understanding Peacock TV and Why You Might Need Help</h1>
+    <p>Guidance on login, activation, billing & support.</p>
+  </section>
+
+  <!-- Marquee -->
+  <div class="marquee">
+    <div class="marquee-text">Need help with Peacock TV login or activation? Follow the guide below for troubleshooting, tips, and contacting support!</div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="container">
+    <h2>Preparing Before Contacting Peacock TV</h2>
+    <p>Gather all relevant info: account email, device type, error messages, and steps you’ve already tried...</p>
+
+    <h2>Step-by-Step Guide to Contacting Peacock TV Support</h2>
+    <ul>
+      <li><strong>Access the Help Center:</strong> Use Peacock’s official support page for common issues.</li>
+      <li><strong>Chat Support:</strong> Available in real time for login or activation problems.</li>
+      <li><strong>Email/Ticket:</strong> Submit detailed info through their form system.</li>
+      <li><strong>Phone (if available):</strong> Use for billing or account recovery concerns.</li>
+      <li><strong>Social Media:</strong> DM verified accounts with care.</li>
+    </ul>
+
+    <h2>Common Issues</h2>
+    <ul>
+      <li><strong>Login Problems:</strong> Describe exact error, device, and attempted solutions.</li>
+      <li><strong>Activation Issues:</strong> Include code, device type, and browser/app used.</li>
+      <li><strong>Playback Errors:</strong> Mention buffering, device, and app version.</li>
+      <li><strong>Billing Questions:</strong> Clarify subscription type and payment platform.</li>
+    </ul>
+
+    <h2>Sample Support Message</h2>
+    <p><em>Hello Peacock TV customer care team...</em> (see full message in your original content)</p>
+
+    <h2>Tips for Better Support Interaction</h2>
+    <ul>
+      <li>Stay logged in during troubleshooting.</li>
+      <li>Include device, browser, and app details.</li>
+      <li>Share timestamps, errors, and screenshots (if allowed).</li>
+    </ul>
+
+    <h2>Summary of Useful Keywords</h2>
+    <p>Use keywords like <strong>Peacock TV account login</strong>, <strong>Peacock TV activate</strong>, <strong>customer service</strong>, <strong>Peacock TV support</strong> to get matched with the right help.</p>
+  </div>
+
+  <script>
+    function toggleMobileMenu() {
+      const menu = document.getElementById("mobileNav");
+      menu.classList.toggle("active");
+    }
+  </script>
+
+</body>
+</html>
